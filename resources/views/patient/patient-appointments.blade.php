@@ -271,11 +271,11 @@
                                 <td>30 Apr 2025 - 09:30 AM</td>
                                 <td>
                                     <div class="d-flex align-items-center">
-                                        <a href="patients-doctor-details.html" class="avatar avatar-md me-2">
+                                        <a href="{{ url('patients-doctor-details') }}" class="avatar avatar-md me-2">
                                             <img src="{{ URL::asset('') }}assets/img/doctors/doctor-01.jpg"
                                                 alt="product" class="rounded-circle">
                                         </a>
-                                        <a href="patients-doctor-details.html"
+                                        <a href="{{ url('patients-doctor-details') }}"
                                             class="text-dark fw-semibold">Dr.Alberto Ripley <span
                                                 class="text-body fs-13 fw-normal d-block">Cardiologist</span> </a>
                                     </div>
@@ -1369,8 +1369,8 @@
     <!-- Custom JS -->
     <script src="{{ URL::asset('') }}assets/js/script.js" type="ec934230511233802d44f596-text/javascript"></script>
 
-    <script src="{{ URL::asset('') }}assets/rocket-loader.min.js"
-        data-cf-settings="ec934230511233802d44f596-|49" defer></script>
+    <script src="{{ URL::asset('') }}assets/rocket-loader.min.js" data-cf-settings="ec934230511233802d44f596-|49" defer>
+    </script>
 </body>
 
 </html>

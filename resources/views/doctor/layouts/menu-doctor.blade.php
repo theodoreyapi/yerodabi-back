@@ -45,13 +45,16 @@
                                 <li class="submenu">
                                     <a href="javascript:void(0);"
                                         class="{{ Request::is('doctors-appointments') ? 'active subdrop' : '' }}
-                                        {{ Request::is('online-consultations') ? 'active subdrop' : '' }}">
+                                        {{ Request::is('online-consultations') ? 'active subdrop' : '' }}
+                                        {{ Request::is('doctors-patient-details') ? 'active subdrop' : '' }}
+                                         ">
                                         <i class="ti ti-calendar-check"></i><span>Rendez-vous</span>
                                         <span class="menu-arrow"></span>
                                     </a>
                                     <ul>
                                         <li><a href="{{ url('doctors-appointments') }}"
-                                                class="{{ Request::is('doctors-appointments') ? 'active' : '' }}">Rendez-vous</a>
+                                                class="{{ Request::is('doctors-appointments') ? 'active' : '' }}
+                                                {{ Request::is('doctors-patient-details') ? 'active' : '' }}">Rendez-vous</a>
                                         </li>
                                         <li><a href="{{ url('online-consultations') }}"
                                                 class="{{ Request::is('online-consultations') ? 'active' : '' }}">Consultations

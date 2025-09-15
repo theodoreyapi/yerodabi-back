@@ -64,7 +64,7 @@
                 <div
                     class="d-flex align-items-sm-center flex-sm-row flex-column gap-2 pb-3 mb-3 border-1 border-bottom">
                     <div class="flex-grow-1">
-                        <h4 class="fw-semibold mb-0"> Appointment </h4>
+                        <h4 class="fw-semibold mb-0"> Rendez-vous </h4>
                     </div>
                     <div class="text-end d-flex">
                         <!-- dropdown-->
@@ -72,29 +72,20 @@
                             <a href="javascript:void(0);"
                                 class="btn btn-md fs-14 fw-normal border bg-white rounded text-dark d-inline-flex align-items-center"
                                 data-bs-toggle="dropdown">
-                                Export<i class="ti ti-chevron-down ms-2"></i>
+                                Exporter<i class="ti ti-chevron-down ms-2"></i>
                             </a>
                             <ul class="dropdown-menu p-2">
                                 <li>
-                                    <a class="dropdown-item" href="appointment-calendar.html#">Download as PDF</a>
+                                    <a class="dropdown-item" href="#">Telecharger em PDF</a>
                                 </li>
                                 <li>
-                                    <a class="dropdown-item" href="appointment-calendar.html#">Download as Excel</a>
+                                    <a class="dropdown-item" href="#">Telecharger em Excel</a>
                                 </li>
                             </ul>
                         </div>
-                        <div
-                            class="bg-white border rounded px-1 pb-0 text-center d-flex align-items-center shadow-sm justify-content-center">
-                            <a href="appointments.html"
-                                class="bg-white rounded p-1 d-flex align-items-center justify-content-center"> <i
-                                    class="ti ti-list fs-14 text-body"></i></a>
-                            <a href="appointment-calendar.html"
-                                class="bg-light rounded p-1 d-flex align-items-center justify-content-center"> <i
-                                    class="ti ti-calendar-event fs-14 text-body"></i> </a>
-                        </div>
 
-                        <a href="new-appointment.html" class="btn btn-primary ms-2 fs-13 btn-md"><i
-                                class="ti ti-plus me-1"></i> New Appointment </a>
+                        <a href="{{ url('new-appointment') }}" class="btn btn-primary ms-2 fs-13 btn-md"><i
+                                class="ti ti-plus me-1"></i> Nouveau rendez-vous </a>
                     </div>
                 </div>
                 <!-- End Page Header -->

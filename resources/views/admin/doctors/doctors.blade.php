@@ -244,7 +244,7 @@
                                 <td>
                                     <div class="d-flex align-items-center">
                                         <div class="action-item me-2">
-                                            <a href="appointment-calendar.html">
+                                            <a href="{{ url('appointment-calendar') }}">
                                                 <i class="ti ti-calendar-cog"></i>
                                             </a>
                                         </div>
@@ -254,14 +254,14 @@
                                             </a>
                                             <ul class="dropdown-menu">
                                                 <li>
-                                                    <a href="edit-doctor.html"
-                                                        class="dropdown-item d-flex align-items-center">Edit</a>
+                                                    <a href="{{ url('edit-doctor') }}"
+                                                        class="dropdown-item d-flex align-items-center">Modifier</a>
                                                 </li>
                                                 <li>
                                                     <a href="javascript:void(0);"
                                                         class="dropdown-item d-flex align-items-center"
                                                         data-bs-toggle="modal"
-                                                        data-bs-target="#delete_modal">Delete</a>
+                                                        data-bs-target="#delete_modal">Suppression</a>
                                                 </li>
                                             </ul>
                                         </div>

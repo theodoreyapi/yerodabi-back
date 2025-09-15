@@ -164,11 +164,11 @@
                                 <td>30 Apr 2025 - 09:30 AM</td>
                                 <td>
                                     <div class="d-flex align-items-center">
-                                        <a href="doctors-patient-details.html" class="avatar avatar-md me-2">
+                                        <a href="{{ url('doctors-patient-details') }}" class="avatar avatar-md me-2">
                                             <img src="{{ URL::asset('') }}assets/img/users/user-01.jpg"
                                                 alt="product" class="rounded-circle">
                                         </a>
-                                        <a href="doctors-patient-details.html" class="fw-semibold">Alberto Ripley
+                                        <a href="{{ url('doctors-patient-details') }}" class="fw-semibold">Alberto Ripley
                                             <span class="text-body fs-13 fw-normal d-block"> +1 56556 54565 </span>
                                         </a>
                                     </div>

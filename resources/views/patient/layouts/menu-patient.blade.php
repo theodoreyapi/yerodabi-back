@@ -46,7 +46,8 @@
                                 </li>
                                 <li
                                     class="{{ Request::is('patient-appointments') ? 'active' : '' }}
-                                {{ Request::is('patient-appointment-details') ? 'active' : '' }}">
+                                {{ Request::is('patient-appointment-details') ? 'active' : '' }}
+                                 ">
                                     <a href="{{ url('patient-appointments') }}">
                                         <i class="ti ti-calendar-check"></i><span>Rendez-vous</span>
                                     </a>
