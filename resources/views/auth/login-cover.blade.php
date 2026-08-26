@@ -66,12 +66,14 @@
                         </div>
                     </div>
                     <!-- end row-->
-
                     <div class="col-lg-6 col-md-12 col-sm-12">
                         <div class="row justify-content-center align-items-center overflow-auto flex-wrap vh-100">
                             <div class="col-md-8 mx-auto">
-                                <form action="{{ url('index') }}" class="d-flex justify-content-center align-items-center">
+                                <form action="{{ url('custom-login') }}" method="POST"
+                                    class="d-flex justify-content-center align-items-center">
+                                    @csrf
                                     <div class="d-flex flex-column justify-content-lg-center p-4 p-lg-0 pb-0 flex-fill">
+                                        @include('admin.layouts.status')
                                         <div class=" mx-auto mb-4 text-center">
                                             {{-- <img src="{{ URL::asset('') }}assets/img/logo.svg" class="img-fluid"
                                                 alt="Logo"> --}}
@@ -91,7 +93,7 @@
                                                         <span class="input-group-text border-end-0 bg-white">
                                                             <i class="ti ti-mail fs-14 text-dark"></i>
                                                         </span>
-                                                        <input type="text" value=""
+                                                        <input type="text" name="email" required
                                                             class="form-control border-start-0 ps-0"
                                                             placeholder="Entrez l'adresse email">
                                                     </div>
@@ -104,7 +106,7 @@
                                                             <span class="input-group-text bg-white border-0">
                                                                 <i class="ti ti-lock text-dark fs-14"></i>
                                                             </span>
-                                                            <input type="password"
+                                                            <input type="password" name="password" required
                                                                 class="pass-input form-control ps-0 border-0"
                                                                 placeholder="****************">
                                                             <span class="input-group-text bg-white border-0">

@@ -1,13 +1,23 @@
 <?php
 
 use App\Http\Controllers\AppointmentCalendarController;
+use App\Http\Controllers\CustomAuthController;
 use App\Http\Controllers\DoctorsController;
 use App\Http\Controllers\PatientsController;
 use App\Models\Pays;
 use App\Models\Specialisations;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
+Route::get('index', [CustomAuthController::class, 'dashboard'])->middleware('auth');
+Route::post('custom-login', [CustomAuthController::class, 'customLogin']);
+Route::get('logout', [CustomAuthController::class, 'signOut'])->name('logout');
+
 Route::get('/', function () {
+    if (Auth::check()) {
+        return redirect()->intended('index');
+    }
+
     return view('auth.login-cover');
 });
 Route::get('register', function () {
@@ -32,11 +42,6 @@ Route::get('privacy', function () {
 });
 Route::get('terms', function () {
     return view('terms.terms-and-conditions');
-});
-
-// Tableau de bord
-Route::get('index', function () {
-    return view('admin.dashboard.index');
 });
 
 // Admin
